@@ -22,6 +22,38 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) to see your app.
 
+## Use as Template
+
+**Option 1: GitHub Template**
+
+1. Click "Use this template" on GitHub
+2. Create your new repository
+3. Clone and start building
+
+**Option 2: Clone directly**
+
+```bash
+git clone https://github.com/yourusername/next-template.git my-project
+cd my-project
+rm -rf .git && git init
+pnpm install
+```
+
+**Option 3: degit**
+
+```bash
+npx degit yourusername/next-template my-project
+cd my-project
+pnpm install
+```
+
+**After cloning:**
+
+1. Update `name` in `package.json`
+2. Update site info in `constants/index.ts`
+3. Copy `.env.example` to `.env.local`
+4. Replace favicon and OG image in `public/`
+
 ## Project Structure
 
 ```
