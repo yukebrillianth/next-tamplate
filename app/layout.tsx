@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 
 import { defaultMetadata } from '@/lib/seo';
@@ -14,7 +15,7 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 });
 
-export const metadata = defaultMetadata;
+export const metadata: Metadata = defaultMetadata;
 
 export default function RootLayout({
   children,
