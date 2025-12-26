@@ -33,7 +33,7 @@ Open [http://localhost:3000](http://localhost:3000) to see your app.
 **Option 2: Clone directly**
 
 ```bash
-git clone https://github.com/yourusername/next-template.git my-project
+git clone https://github.com/yukebrillianth/next-template.git my-project
 cd my-project
 rm -rf .git && git init
 pnpm install
@@ -42,7 +42,7 @@ pnpm install
 **Option 3: degit**
 
 ```bash
-npx degit yourusername/next-template my-project
+npx degit yukebrillianth/next-template my-project
 cd my-project
 pnpm install
 ```
