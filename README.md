@@ -97,6 +97,22 @@ Edit `lib/env.ts` to add your environment variables with type-safe validation.
 2. Replace favicon and OG image in `public/`
 3. Modify `app/sitemap.ts` to include your routes
 
+## Docker
+
+To self-host with Docker:
+
+1. Enable standalone output in `next.config.ts`:
+
+   ```ts
+   output: 'standalone',
+   ```
+
+2. Build and run:
+   ```bash
+   docker build -t my-app .
+   docker run -p 3000:3000 my-app
+   ```
+
 ## License
 
 MIT
