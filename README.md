@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Starter Template
+
+A production-ready Next.js 16 starter with TypeScript, Tailwind CSS 4, and sensible defaults.
+
+## Features
+
+- **Next.js 16** with App Router and React 19
+- **TypeScript** with strict mode
+- **Tailwind CSS 4** with PostCSS
+- **ESLint 9** with import sorting
+- **Prettier** with Tailwind plugin
+- **Husky + lint-staged** for pre-commit hooks
+- **Commitlint** for conventional commits
+- **SEO ready** with sitemap and robots.txt
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to see your app.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+├── app/                # Next.js App Router
+├── components/
+│   ├── ui/             # Reusable UI components
+│   └── layouts/        # Layout components
+├── lib/
+│   ├── cn.ts           # clsx + tailwind-merge
+│   ├── env.ts          # Type-safe env vars
+│   ├── helpers.ts      # Utility functions
+│   └── seo.ts          # SEO metadata helper
+├── hooks/              # Custom React hooks
+├── types/              # TypeScript types
+└── constants/          # Site config
+```
 
-## Learn More
+## Scripts
 
-To learn more about Next.js, take a look at the following resources:
+| Command         | Description          |
+| --------------- | -------------------- |
+| `pnpm dev`      | Start dev server     |
+| `pnpm build`    | Production build     |
+| `pnpm lint`     | Run ESLint           |
+| `pnpm lint:fix` | Fix lint issues      |
+| `pnpm format`   | Format with Prettier |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Environment Variables
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Copy `.env.example` to `.env.local` and fill in your values:
 
-## Deploy on Vercel
+```bash
+cp .env.example .env.local
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Edit `lib/env.ts` to add your environment variables with type-safe validation.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Customization
+
+1. Update `constants/index.ts` with your site info
+2. Replace favicon and OG image in `public/`
+3. Modify `app/sitemap.ts` to include your routes
+
+## License
+
+MIT
